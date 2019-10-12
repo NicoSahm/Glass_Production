@@ -4,7 +4,7 @@
 # 3 Ventile sind die Schnittstelle (pre)
 # 1 Ausgang lässt Gesamtfüllung (Wagen =0 aufs Förderband) (past)
 
-class Time:  
+class mischbehaelter:  
   def mische_erzeugen():
     # 1. Ventil 1 öffnen bis ca. max23kg auf der Wage sind.
     # 2. Ventil 2 öffnen bis 5,4kg zusätzlich hinzugefügt wurden.
