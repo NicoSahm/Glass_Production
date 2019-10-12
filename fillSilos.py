@@ -1,6 +1,0 @@
-class fillSilos(object):
-    pass
-
-
-
-
