@@ -41,6 +41,9 @@ class mische:
 
     # 5. 60sek alles mischen. (sleep und print-Ausgabe)
     print("Mixing for 60 seconds.")
+    mixer.start
+    sleep (60000)
+    mixer.stop
 
     # 6. Ausgangsventil öffnen und Scheiße raushauen.
     print("current weight: " + wage.weight)
