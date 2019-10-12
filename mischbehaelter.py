@@ -1,7 +1,7 @@
 # Sensoren
 # mischbehaelter_wage
 
-# 3 Ventile sind die Schnittstelle (pre)
+# 3 Ventile sind die Schnittstelle (pre)----
 # 1 Ausgang lässt Gesamtfüllung (Wagen =0 aufs Förderband) (past)
 
 
