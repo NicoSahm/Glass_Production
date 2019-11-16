@@ -12,16 +12,18 @@ class mische:
     amount2 = 5.3846
     amount3 = 1.5385
 
+    silo1Weight =   silo1.getWeight()
+    silo2Weight =   silo2.getWeight()
+    silo3Weight =   silo3.getWeight()
+
     if (silo1Weight >= amount1 && silo2Weight >= amount2 && silo3Weight >= amount3 )
         # 1. Ventil 1 öffnen bis ca. max23kg auf der Wage sind.
         print("Open Ventil 1")
-        silo1Weight =   silo1.getWeight()
 
         while wage.weight <= amount1
             ventil1.open
         
         print("Close Ventil 1")
-        ventil1.close
 
         # 2. Ventil 2 öffnen bis 5,4kg zusätzlich hinzugefügt wurden.
         print("Open Ventil 2")
@@ -29,7 +31,6 @@ class mische:
             ventil2.open
         
         print("Close Ventil 2")
-        ventil2.close
 
         # 3. 30sek alles Mischen. (sleep und print-Ausgabe)
         print("Mixing for 30 seconds.")
@@ -43,7 +44,6 @@ class mische:
             ventil3.open
         
         print("Close Ventil 3")
-        ventil3.close
 
         # 5. 60sek alles mischen. (sleep und print-Ausgabe)
         print("Mixing for 60 seconds.")
@@ -56,8 +56,7 @@ class mische:
         print("Go away shit.")
         while wage.weight > 0
             ventil4.open
-
-        ventil4.close    
+ 
         print("current weight: " + wage.weight)
 
         return ("Sucess")
