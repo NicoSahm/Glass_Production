@@ -6,51 +6,61 @@
 # Ventil2 = 5.3846 kg
 # Ventil2 = 1.5385 kg
 
-class mische:  
+class mische:   
   def createMische():
-    # 1. Ventil 1 öffnen bis ca. max23kg auf der Wage sind.
-    print("Open Ventil 1")
-    while wage.weight <= 23.0769
-        ventil1.open
-    
-    print("Close Ventil 1")
-    ventil1.close
+    amount1 = 23.0769
+    amount2 = 5.3846
+    amount3 = 1.5385
 
-    # 2. Ventil 2 öffnen bis 5,4kg zusätzlich hinzugefügt wurden.
-    print("Open Ventil 2")
-    while wage.weight <= (5.3846 + 23.0769)
-        ventil2.open
-    
-    print("Close Ventil 2")
-    ventil2.close
+    if (silo1Weight >= amount1 && silo2Weight >= amount2 && silo3Weight >= amount3 )
+        # 1. Ventil 1 öffnen bis ca. max23kg auf der Wage sind.
+        print("Open Ventil 1")
+        silo1Weight =   silo1.getWeight()
 
-    # 3. 30sek alles Mischen. (sleep und print-Ausgabe)
-    print("Mixing for 30 seconds.")
-    mixer.start
-    sleep (30000)
-    mixer.stop
+        while wage.weight <= amount1
+            ventil1.open
+        
+        print("Close Ventil 1")
+        ventil1.close
 
-    # 4. Ventil 3 öffnen und warten bis 1,5 zusätzlich auf der Wagen.
-    print("Open Ventil 3")
-    while wage.weight <= (1.5385 + 5.3846 + 23.0769)
-        ventil3.open
-    
-    print("Close Ventil 3")
-    ventil3.close
+        # 2. Ventil 2 öffnen bis 5,4kg zusätzlich hinzugefügt wurden.
+        print("Open Ventil 2")
+        while wage.weight <= (amount2 + amount1)
+            ventil2.open
+        
+        print("Close Ventil 2")
+        ventil2.close
 
-    # 5. 60sek alles mischen. (sleep und print-Ausgabe)
-    print("Mixing for 60 seconds.")
-    mixer.start
-    sleep (60000)
-    mixer.stop
+        # 3. 30sek alles Mischen. (sleep und print-Ausgabe)
+        print("Mixing for 30 seconds.")
+        mixer.start
+        sleep (30000)
+        mixer.stop
 
-    # 6. Ausgangsventil öffnen und Scheiße raushauen.
-    print("current weight: " + wage.weight)
-    print("Go away shit.")
-    while wage.weight > 0
-        ventil4.open
+        # 4. Ventil 3 öffnen und warten bis 1,5 zusätzlich auf der Wagen.
+        print("Open Ventil 3")
+        while wage.weight <= (1.5385 + 5.3846 + 23.0769)
+            ventil3.open
+        
+        print("Close Ventil 3")
+        ventil3.close
 
-    ventil4.close    
-    print("current weight: " + wage.weight)
+        # 5. 60sek alles mischen. (sleep und print-Ausgabe)
+        print("Mixing for 60 seconds.")
+        mixer.start
+        sleep (60000)
+        mixer.stop
 
-    return ()
+        # 6. Ausgangsventil öffnen und Scheiße raushauen.
+        print("current weight: " + wage.weight)
+        print("Go away shit.")
+        while wage.weight > 0
+            ventil4.open
+
+        ventil4.close    
+        print("current weight: " + wage.weight)
+
+        return ("Sucess")
+
+    else
+        return ("Fatal ERROR")
