@@ -6,12 +6,9 @@
 # Ventil2 = 5.3846 kg
 # Ventil2 = 1.5385 kg
 
-#123
-
 class mische:  
-  def create():
+  def createMische():
     # 1. Ventil 1 öffnen bis ca. max23kg auf der Wage sind.
-
     print("Open Ventil 1")
     while wage.weight <= 23.0769
         ventil1.open
