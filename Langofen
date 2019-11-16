@@ -1,0 +1,13 @@
+class longoven:
+    def __init__(self):
+        self.__glasses = 0
+        self.__temp = 1400
+        self.__reduce = 29
+    def set_glasses(self,glasses_size):
+        self.__glasses += glasses_size
+    def reduce_temp(self):
+        while self.__temp != 120:
+            self.__temp = self.__temp - self.__reduce
+        return self.__temp
+    def get_glasses(self):
+        return self.__glasses
